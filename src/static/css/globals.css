@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html,body{
+    height: 100%;
+}
+body{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    background: #CEF6FF;
+    overflow-y: hidden;  
+}
+body::-webkit-scrollbar{
+    display: none;
+} 
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    all : unset;
+}
+/*--------------------*/
+.app{
+    display:flex;
+    flex-direction:column;
+    width: 100vw;
+
+}
+
+.top-bar{
+    background: #36213E;
+    width:calc(100% - 150px);
+    height: 70px;
+    padding: 20px;
+    position:fixed;
+    top:0;
+    left:0;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    z-index: 1;
+    padding-left: 75px;
+    padding-right: 75px;
+}
+.top-bar h1{
+    font-size: 40px;
+    font-weight:normal;
+    color:#CEF6FF;
+}
+.logo{
+    height: 85px;
+}
+
+.main-body{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    background-color: yellowgreen;
+    justify-content: center;
+}
+/*react-autosuggest CSS*/
+.react-autosuggest__container{
+    height: 40px;
+    position : fixed;
+    top : 110px;
+    right : 0px;
+    width:100%;
+    z-index: 1;
+}
+.react-autosuggest__input{
+    width:290px;
+    height: 40px;
+    position: fixed;
+    top: 150px;
+    right: 78px;
+    border-radius: 4px;
+    font-size: 20px;
+}
+.react-autosuggest__input::-webkit-input-placeholder {
+    color: lightgray;
+}
+.react-autosuggest__suggestions-list{
+    font-size: 15px;
+    position: absolute;
+    top:85px;
+    right:78px; 
+    border: solid 1px black;
+    width: 290px;
+    background-color: white; 
+    border-radius: 4px;
+    padding: 2px; 
+    max-height: 130px;
+    overflow-y: scroll; 
+    box-shadow: 4px 4px 5px 1px rgba(0,0,0, 0.32); 
+}
+.react-autosuggest__suggestions-list::-webkit-scrollbar{
+    display: none;
+}
+/* CurrentProfile Component CSS*/
+.main-current-profile{
+    display: flex;
+    position: fixed;
+    left: 75px;
+    top : 200px;
+    height: 500px;
+    width: 920px;
+    justify-content: space-around;
+    background-color: #8AC6D0;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 4px 4px 5px 1px rgba(0,0,0, 0.32);
+    color:#36213E;
+}
+.profile-image{
+    border-radius: 50%;
+    height: 400px;
+    width: 400px;
+    margin: 19px;
+    margin-left: 25px;
+}
+.profile-data{
+    font-size: 17px;
+    margin: -16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.profile-box { 
+    width: 50%;
+}
+.repos {
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.repos-list{
+    font-size : 17px;
+    margin-left: 30px;
+    height: 100%;
+    overflow-y: scroll;
+
+}
+.repos-list li{
+    margin-top: 17px;
+    position: relative;
+}
+.repos-list img {
+    height: 12px;
+    margin-right: 6px;
+}
+.repos-list li:hover{
+    color: #CEF6FF;
+    cursor: pointer;
+}
+.repos-list li:hover .blue-cat {
+    z-index: 1;
+    height: 13px;
+}
+.blue-cat{
+    position: absolute;
+    left :0px;
+    top : 4px;
+    z-index : -1;
+} 
+.repos-list::-webkit-scrollbar{
+    display: none;
+} 
+.repos p {
+    margin-bottom: 6px;
+    font-size: 24px;
+    color: #554971;
+    width: 100%;
+    margin-left: 30px;
+    margin-top: 22px;
+}
+
+/*InifiniteSideBar component CSS*/
+.infinite-scroll-component{
+    position: fixed;
+    top : 200px;
+    right : 75px;
+    box-shadow: 4px 4px 5px 1px rgba(0,0,0, 0.32);
+    background-color:  #8AC6D0;
+    border-radius: 4px;
+    color:#36213E;
+} 
+.infinite-scroll-component::-webkit-scrollbar{
+    display: none;
+}
+.users-list{
+    width: 300px; 
+    right: 100px;
+    top: 200px;
+}
+/*Profile component CSS*/
+.profile-main{
+    display: flex;
+    margin-top: 15px;
+}
+@keyframes slide {
+    to { transform: translate(-10px,-10px)}
+}
+.profile-main:hover{
+    background-color:#554971;
+    animation: slide 0.1s forwards;
+    cursor: pointer;
+    width:310px;
+}
+.profile-pic{
+    width: 100px;
+    height: 100px;
+    margin-left: 15px;
+    border-radius: 50%;
+    padding: 5px;
+}
+.profile-id{
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 20px;
+}
